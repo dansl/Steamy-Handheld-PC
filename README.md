@@ -53,3 +53,4 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
 	- Open Settings > Interface > enable "Run Steam when my computer starts".
 		- Optional: Also enable "Start Steam in Big Picture Mode" if you want it to feel more like a SteamDeck
 - If bluetooth isn't working, downgrade bluez to 5.68.
+- I recommend you enable Accessibility feature "on-screen keyboard".
