@@ -22,17 +22,15 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
   - Using Pacman or PAMAC
     - inputplumber
     - Steam
-    - MangoHUD
     - steam-powerbuttond
     - ayaneo-platform-dkms
     ```
-    sudo pacman -S inputplumber steam-powerbuttond steam mangohud ayaneo-platform-dkms
+    sudo pacman -S inputplumber steam-powerbuttond steam ayaneo-platform-dkms
     ```
-
   - Using AUR
-    - gamescope-session-steam-git
+    - chimeraos-device-quirks
     ```
-    yay -S gamescope-session-steam-git
+    yay -S chimeraos-device-quirks
     ```
 
   - Manually install
@@ -53,4 +51,5 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
 - Open Steam app.
 	- If you are unable to control the mouse with the controller. Open Settings > Controller > Scroll to 'Desktop Layout'. Enable 'Steam Input' and setup controls.
 	- Open Settings > Interface > enable "Run Steam when my computer starts".
-		- Optional: Also enable "Start Steam in Big Picture Mode" if you want it to feel more like a SteamDeck.
+		- Optional: Also enable "Start Steam in Big Picture Mode" if you want it to feel more like a SteamDeck
+- If bluetooth isn't working, downgrade bluez to 5.68.
