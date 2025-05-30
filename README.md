@@ -48,6 +48,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
 	```
 	sudo systemctl enable inputplumber && sudo systemctl start inputplumber
   ```
+
   - Fix popping sound with speakers
   ```
   echo "options snd_hda_intel power_save=0 power_save_controller=N" > /etc/modprobe.d/audio.conf
