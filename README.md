@@ -23,8 +23,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
   - Using Pacman or PAMAC
     - inputplumber
     - steam
-    - steam-powerbuttond
-    - ayaneo-platform-dkms
+    - steam-powerbuttond-git
     ```
     sudo pacman -S inputplumber steam-powerbuttond-git steam
     ```
