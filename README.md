@@ -64,3 +64,4 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
 	- Enable Accessibility feature "on-screen keyboard".
  	- Enable Auto-Login
  	- Disable Lock Screen and Screen Sleep Lock
+  	- Set your TDP to the recommended amount for your chipset/device using SimpleDeckyTDP
