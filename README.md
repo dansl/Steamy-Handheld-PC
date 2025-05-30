@@ -43,10 +43,15 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
     - HueSync (https://github.com/honjow/HueSync)
     - DeckyPlumber (https://github.com/aarron-lee/DeckyPlumber)
 
-- Open Terminal and enter
+- Open Terminal and enter these:
+  - Enable InputPlumber
 	```
 	sudo systemctl enable inputplumber && sudo systemctl start inputplumber
-	```
+  ```
+  - Fix popping sound with speakers
+  ```
+  echo "options snd_hda_intel power_save=0 power_save_controller=N" > /etc/modprobe.d/audio.conf
+  ```
 - If you haven't already, do a REBOOT.
 - Open Steam app.
 	- If you are unable to control the mouse with the controller. Open Settings > Controller > Scroll to 'Desktop Layout'. Enable 'Steam Input' and setup controls.
