@@ -47,16 +47,19 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
   - Enable InputPlumber
 	```
 	sudo systemctl enable inputplumber && sudo systemctl start inputplumber
-  ```
+ 	```
 
   - Fix popping sound with speakers
-  ```
-  echo "options snd_hda_intel power_save=0 power_save_controller=N" > /etc/modprobe.d/audio.conf
-  ```
+	  ```
+	  echo "options snd_hda_intel power_save=0 power_save_controller=N" > /etc/modprobe.d/audio.conf
+	  ```
 - If you haven't already, do a REBOOT.
 - Open Steam app.
 	- If you are unable to control the mouse with the controller. Open Settings > Controller > Scroll to 'Desktop Layout'. Enable 'Steam Input' and setup controls.
 	- Open Settings > Interface > enable "Run Steam when my computer starts".
 		- Optional: Also enable "Start Steam in Big Picture Mode" if you want it to feel more like a SteamDeck
 - If bluetooth isn't working, downgrade bluez to 5.68.
-- I recommend you enable Accessibility feature "on-screen keyboard".
+- Recommendations:
+	- Enable Accessibility feature "on-screen keyboard".
+ 	- Enable Auto-Login
+ 	- Disable Lock Screen and Screen Sleep Lock
