@@ -53,7 +53,8 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
 	  ```
 	  echo "options snd_hda_intel power_save=0 power_save_controller=N" > /etc/modprobe.d/audio.conf
 	  ```
-- If you haven't already, do a REBOOT.
+- Reboot Device, and while booting hold down "Shift". Select the kernel that mentions "ChimeraOS" on it, if it's not already selected.
+	- You need to set this kernel as default, if it's not already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup.
 - Open Steam app.
 	- If you are unable to control the mouse with the controller. Open Settings > Controller > Scroll to 'Desktop Layout'. Enable 'Steam Input' and setup controls.
 	- Open Settings > Interface > enable "Run Steam when my computer starts".
