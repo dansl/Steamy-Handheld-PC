@@ -29,9 +29,9 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
     ```
   - Using AUR
     - chimeraos-device-quirks
-    - ayaneo-platform-dkms
+    - ayaneo-platform-dkms-git
     ```
-    yay -S chimeraos-device-quirks ayaneo-platform-dkms
+    yay -S chimeraos-device-quirks ayaneo-platform-dkms-git
     ```
 
   - Manually install these using ```sudo pacman -S [path_to_file]``` or depending on the distro, just opening the file will install it.
