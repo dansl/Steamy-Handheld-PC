@@ -26,12 +26,13 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
     - steam-powerbuttond
     - ayaneo-platform-dkms
     ```
-    sudo pacman -S inputplumber steam-powerbuttond steam ayaneo-platform-dkms
+    sudo pacman -S inputplumber steam-powerbuttond-git steam
     ```
-  - Using AUR (Possibly an optional step...)
+  - Using AUR
     - chimeraos-device-quirks
+    - ayaneo-platform-dkms
     ```
-    yay -S chimeraos-device-quirks
+    yay -S chimeraos-device-quirks ayaneo-platform-dkms
     ```
 
   - Manually install these using ```sudo pacman -S [path_to_file]``` or depending on the distro, just opening the file will install it.
