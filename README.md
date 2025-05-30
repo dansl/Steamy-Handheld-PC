@@ -1,47 +1,60 @@
-# Steamy-Ayaneo
-Turn your Ayaneo handheld PC into a SteamOS-like device running Arch Linux.
+# Steamy Ayaneo
+Ditch Windows and turn your Ayaneo handheld PC into a SteamOS-like device with Arch Linux.
 
 **WORK IN PROGRESS**
 
 For now, this is just a rough idea of how to run Arch Linux properly on your Ayaneo Handheld.
 
 ## Devices Tested
- - Ayaneo Air1S
+ - Ayaneo Air 1S
  - Ayaneo Flip DS
 
 
 ## Things you need
-- Ayaneo device
-- Keyboard + Mouse (might not be needed on some devices, but still makes things easier in the beginning)
-- USB Stick with a bootable Arch distro on it. (My personal choice is [Manjaro Linux](https://manjaro.org))
+- Ayaneo PC x86/64
+- Keyboard + Mouse (not needed on some devices, but makes things easier at first)
+- USB Stick loaded with bootable [Arch](https://archlinux.org) on it.
+	- While you can run stock Arch, I prefer an Arch distro. My personal choice is [Manjaro](https://manjaro.org) with GNOME, but some other great options are [EndeavourOS](https://endeavouros.com) or [CachyOS](https://cachyos.org) or many others.
 
 ## How to start
 - First, use the USB stick to install your chosen Arch Linux on your device.
   - You can access the boot menu by mashing F7 while the device boots.
-- Once booted into the device, install these packages.
+- Once booted into the OS, install these packages.
   - Using Pacman or PAMAC
     - inputplumber
-    - Steam
+    - steam
     - steam-powerbuttond
     - ayaneo-platform-dkms
     ```
     sudo pacman -S inputplumber steam-powerbuttond steam ayaneo-platform-dkms
     ```
-  - Using AUR
+  - Using AUR (Possibly an optional step...)
     - chimeraos-device-quirks
     ```
     yay -S chimeraos-device-quirks
     ```
 
-  - Manually install
+  - Manually install these using ```sudo pacman -S [path_to_file]``` or depending on the distro, just opening the file will install it.
     - ChimeraOS Kernel & Header (https://github.com/ChimeraOS/linux-chimeraos)
-    - Audio Firmware (File in repo: aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
+    - Audio Firmware (File in this Repo: aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
 
   - Optional but Highly Recommended
     - Decky Loader (https://github.com/SteamDeckHomebrew/decky-loader)
+      ```
+      curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/uninstall.sh | sh
+      ``` 
     - SimpleDeckyTDP (https://github.com/aarron-lee/SimpleDeckyTDP)
-    - HueSync (https://github.com/honjow/HueSync)
+      ```
+      curl -L https://github.com/aarron-lee/SimpleDeckyTDP/raw/main/install.sh | sh
+      ```
     - DeckyPlumber (https://github.com/aarron-lee/DeckyPlumber)
+      ```
+      curl -L https://github.com/aarron-lee/DeckyPlumber/raw/main/install.sh | sh
+      ```
+    - HueSync (https://github.com/honjow/HueSync)
+      ```
+      curl -L https://raw.githubusercontent.com/honjow/huesync/main/install.sh | sh
+      ```
 
 - Open Terminal and enter these:
   - Enable InputPlumber
