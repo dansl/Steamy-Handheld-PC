@@ -41,7 +41,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
   - Optional but Highly Recommended
     - Decky Loader (https://github.com/SteamDeckHomebrew/decky-loader)
       ```
-      curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/uninstall.sh | sh
+      curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh
       ``` 
     - SimpleDeckyTDP (https://github.com/aarron-lee/SimpleDeckyTDP)
       ```
