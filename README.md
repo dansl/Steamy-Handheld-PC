@@ -85,4 +85,4 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 		options snd_hda_intel power_save=0 power_save_controller=N
 		```
 	  	- Press ctrl+x then type 'y' and press enter to save and finish.
-   	- No Audio: Download and install the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Ayaneo/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
+   	- No Audio: Download and install the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Handheld-PC/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
