@@ -3,7 +3,7 @@ Ditch Windows and turn your handheld PC into a SteamOS-like device with Arch Lin
 
 **!! WORK IN PROGRESS !!**
 
-For now, this is just a rough idea of how to run Arch Linux properly on your Handheld. I am not using Gamescope session, as it can tend to be a bit more complicated to setup. This will only set up running Steam in "Big Picture Mode" for a "SteamOS-like" experience.
+For now, this is just a rough idea of how to run Arch Linux properly on your Handheld. I am not using Gamescope session, as it can tend to be a bit more complicated to setup. This will only set up running Steam in "Big Picture Mode" for a "SteamOS-like" experience. Alternativly, you could also just install [ChimeraOS](https://chimeraos.org), but if that distro ever stops being supported or you would rather just use your own Arch setup, then this is a good starting point.
 
 ## Devices Tested
  - Ayaneo Air 1S: No known issues.
