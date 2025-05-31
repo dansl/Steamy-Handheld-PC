@@ -75,6 +75,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 
 - Possible fixes for some issues:
 	- No Bluetooth: Try downgrading Bluez to v5.68.
+   	- No Audio: Download and install the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Handheld-PC/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
  	- Popping sound in speakers:
   		- Create/edit file at "/etc/modprobe.d/audio.conf"
 		```
@@ -85,4 +86,3 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 		options snd_hda_intel power_save=0 power_save_controller=N
 		```
 	  	- Press ctrl+x then type 'y' and press enter to save and finish.
-   	- No Audio: Download and install the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Handheld-PC/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
