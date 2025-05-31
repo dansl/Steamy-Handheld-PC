@@ -63,9 +63,15 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Aya
  	```
 
   - Fix popping sound with speakers
-	  ```
-	  echo "options snd_hda_intel power_save=0 power_save_controller=N" > /etc/modprobe.d/audio.conf
-	  ```
+	```
+	sudo nano /etc/modprobe.d/audio.conf
+	```
+   	- Paste this into terminal
+	```
+	options snd_hda_intel power_save=0 power_save_controller=N
+	```
+  	- Press ctrl+x then type 'y' and press enter
+         
 - Reboot Device, and while booting hold down "Shift". Select the kernel that mentions "ChimeraOS" on it, if it's not already selected.
 	- You need to set this kernel as default, if it's not already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup.
 - Open Steam app.
