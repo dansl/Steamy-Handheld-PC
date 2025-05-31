@@ -93,3 +93,5 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
     ```
     SteamDeck=1 %command%
     ```
+
+For tips on how to use Linux, check out my [Linux Tips](https://github.com/dansl/LinuxOS-Stuff)!
