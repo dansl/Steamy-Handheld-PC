@@ -89,3 +89,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 		options snd_hda_intel power_save=0 power_save_controller=N
 		```
 	  	- Press ctrl+x then type 'y' and press enter to save and finish.
+  - If a game in Steam is not loading properly. Try adding this line to the games "Launch Options".
+    ```
+    SteamDeck=1 %command%
+    ```
