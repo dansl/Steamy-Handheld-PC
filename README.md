@@ -64,6 +64,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 - Reboot Device, and while booting hold down "Shift". This should open the Kernel menu, select the kernel that mentions "ChimeraOS" on it, if it's not already selected.
 	- You will need to set this kernel as default, if it's not already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup. Periodically you can manually update the kernel as Chimera releases new ones.
 - Open Steam app.
+	- Go to Settings > Compatability, and toggle on "Enable Steam Play for all other titles".
 	- If you are unable to control the mouse pointer with the controller. Open Settings > Controller > Scroll down to 'Desktop Layout'. Enable 'Steam Input' and setup the controls.
 	- Optional: Open Settings > Interface > enable "Run Steam when my computer starts" and also enable "Start Steam in Big Picture Mode" if you want it to feel more like a SteamDeck when it boots up.
 - Recommendations:
