@@ -18,7 +18,8 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 ## How to start
 - First, use the USB stick to install your chosen Arch distro on your device.
   - You can usually access the boot menu by mashing F7 while the device boots.
-- Once booted into the OS, install these packages.
+  - TIP: Remove any SD cards before installing, just so you don't accidentally install the OS to the SD card.
+- Once your OS is installed and you are booted into the OS, install these packages.
   - Using Pacman
     - inputplumber
     - steam
