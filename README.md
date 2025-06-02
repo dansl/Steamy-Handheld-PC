@@ -15,43 +15,43 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 - USB Stick loaded with bootable [Arch](https://archlinux.org) on it.
 	- While you could run stock Arch, I prefer an Arch distro. My personal choice is [Manjaro](https://manjaro.org) with GNOME, but some other great options are [EndeavourOS](https://endeavouros.com) or [CachyOS](https://cachyos.org) or many others.
 
-## How to start
+## How to Setup
 - First, use the USB stick to install your chosen Arch distro on your device.
   - You can usually access the boot menu by mashing F7 while the device boots.
   - TIP: Remove any SD cards before installing, just so you don't accidentally install the OS to the SD card.
 - Once your OS is installed and you are booted into the OS, install these packages.
   - Using Pacman
-    - inputplumber
-    - steam
+    - [inputplumber](https://github.com/ShadowBlip/InputPlumber)
+    - [steam](https://wiki.archlinux.org/title/Steam)
     ```
     sudo pacman -S inputplumber steam
     ```
   - Using AUR
-    - chimeraos-device-quirks
+    - [chimeraos-device-quirks](https://github.com/ChimeraOS/device-quirks)
 	```
 	yay -S chimeraos-device-quirks
 	```
-    - FOR AYANEO DEVICES ONLY: ayaneo-platform-dkms-git
+    - AYANEO DEVICES ONLY: [ayaneo-platform-dkms-git](https://github.com/ShadowBlip/ayaneo-platform)
 	```
 	yay -S ayaneo-platform-dkms-git
 	```
 
   - Manually install
-    - ChimeraOS Kernel & Header (https://github.com/ChimeraOS/linux-chimeraos/releases)
+    - [ChimeraOS Kernel & Header](https://github.com/ChimeraOS/linux-chimeraos/releases)
     	- Download both the Kernel and Header files, then install them using ```sudo pacman -S [path_to_file]``` or depending on the Arch distro, just opening the file should install it.
-    - Decky Loader (https://github.com/SteamDeckHomebrew/decky-loader)
+    - [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader)
       ```
       curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh
       ``` 
-    - SimpleDeckyTDP (https://github.com/aarron-lee/SimpleDeckyTDP)
+    - [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP)
       ```
       curl -L https://github.com/aarron-lee/SimpleDeckyTDP/raw/main/install.sh | sh
       ```
-    - DeckyPlumber (https://github.com/aarron-lee/DeckyPlumber)
+    - [DeckyPlumber](https://github.com/aarron-lee/DeckyPlumber)
       ```
       curl -L https://github.com/aarron-lee/DeckyPlumber/raw/main/install.sh | sh
       ```
-    - HueSync (https://github.com/honjow/HueSync) NOTE: This is only needed if your device has color LED lights on it, otherwise ignore this one.
+    - [HueSync](https://github.com/honjow/HueSync) (NOTE: This is only needed if your device has color LED lights on it, otherwise ignore this one.)
       ```
       curl -L https://raw.githubusercontent.com/honjow/huesync/main/install.sh | sh
       ```
@@ -67,31 +67,31 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 	- Go to Settings > Compatability, and toggle on "Enable Steam Play for all other titles".
 	- If you are unable to control the mouse pointer with the controller. Open Settings > Controller > Scroll down to 'Desktop Layout'. Enable 'Steam Input' and setup the controls.
 	- Optional: Open Settings > Interface > enable "Run Steam when my computer starts" and also enable "Start Steam in Big Picture Mode" if you want it to feel more like a SteamDeck when it boots up.
-- Recommendations:
-	- Enable Accessibility feature "on-screen keyboard" in settings (if available).
- 	- Enable Auto-Login.
- 	- Disable Lock Screen and Sleep Lock.
-  	- Set your TDP to the recommended amount for your chipset/device using SimpleDeckyTDP.
-  	- Set your controller to "Steam Deck" using DeckyPlumber.
-  	- Install "CSS Loader" and "[Handheld Controller Glyphs](https://github.com/victor-borges/handheld-controller-glyphs)" to change all the glyphs in the UI to match your device.
+## Recommendations:
+- Enable Accessibility feature "on-screen keyboard" in settings (if available).
+- Enable Auto-Login.
+- Disable Lock Screen and Sleep Lock.
+- Set your TDP to the recommended amount for your chipset/device using SimpleDeckyTDP.
+- Set your controller to "Steam Deck" using DeckyPlumber.
+- Install "CSS Loader" and "[Handheld Controller Glyphs](https://github.com/victor-borges/handheld-controller-glyphs)" to change all the glyphs in the UI to match your device.
 
-- Possible fixes for some issues:
-	- No Bluetooth: Try downgrading Bluez to v5.68.
-   	- No Audio: Download and install the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Handheld-PC/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
-   		- This is available via AUR, but it's URL is broken... [(See Comments Here)](https://aur.archlinux.org/packages/aw87559-firmware) 
- 	- Popping sound in speakers:
-  		- Create/edit file at "/etc/modprobe.d/audio.conf"
-		```
-		sudo nano /etc/modprobe.d/audio.conf
-		```
-	   	- Paste this text into terminal
-		```
-		options snd_hda_intel power_save=0 power_save_controller=N
-		```
-	  	- Press ctrl+x then type 'y' and press enter to save and finish.
-  - If a game in Steam is not loading properly. Try adding this line to the games "Launch Options".
-    ```
-    SteamDeck=1 %command%
-    ```
+## Possible fixes for some issues:
+- No Bluetooth: Try downgrading Bluez to v5.68.
+- No Audio: Download and install the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Handheld-PC/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
+	- This is available via AUR, but it's URL is broken... [(See Comments Here)](https://aur.archlinux.org/packages/aw87559-firmware) 
+- Popping sound in speakers:
+	- Create/edit file at "/etc/modprobe.d/audio.conf"
+	```
+	sudo nano /etc/modprobe.d/audio.conf
+	```
+	- Paste this text into terminal
+	```
+	options snd_hda_intel power_save=0 power_save_controller=N
+	```
+	- Press ctrl+x then type 'y' and press enter to save and finish.
+- If a game in Steam is not loading properly. Try adding this line to the games "Launch Options".
+	```
+	SteamDeck=1 %command%
+	```
 
 For tips on how to use Linux, check out my [Linux Tips](https://github.com/dansl/LinuxOS-Stuff)!
