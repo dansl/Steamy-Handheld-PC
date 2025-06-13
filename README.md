@@ -10,7 +10,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 - Everything should function just like you were using Windows Desktop, but it's 100x better because Linux!
 - Use Decky Loader + SimpleDeckyTDP to adjust your GPU and CPU power consumption to maximize your battery.
 - Use InputPlumber to rebind any button on your device or emualte any controller.
-- Adjust your devices RBG lighting using HueSync.
+- Adjust your devices RGB lighting using HueSync.
 
 ## Devices Tested
 
