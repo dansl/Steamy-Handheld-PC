@@ -85,9 +85,10 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 - Enable Auto-Login.
 - Disable Lock Screen and Sleep Lock.
 - Set your TDP to the recommended amount for your chipset/device using SimpleDeckyTDP.
-	- Many devices can be set to a max of 25W-30W. Then use the per-game setting to adjust the current TDP lower to save battery life on lower end games.
-- Set your controller to "Steam Deck" using DeckyPlumber.
-- Install "CSS Loader" and "[Handheld Controller Glyphs](https://github.com/victor-borges/handheld-controller-glyphs)" to change all the glyphs in the UI to match your device.
+	- Many devices can be set to a Max of 25W-30W, but don't go too high or else your device will crash and reboot.
+ 	- PRO TIP: Turn on Steam's FPS overlay and start playing your game. Then trying dropping the current TDP to 10W and test the game... If your FPS drops, then try setting to 15W and test. If FPS drops go up some more, but if it's stable then either stop there or try to bring it down a bit. After a few adjustments you will know what TDP is good for stable FPS and much better battery life!
+- Set your controller to "Steam Deck" mode using DeckyPlumber.
+- Install "CSS Loader" Decky Loader Plugin and "[Handheld Controller Glyphs](https://github.com/victor-borges/handheld-controller-glyphs)" to change all the glyphs in the UI to match your device.
 
 ## Fixes:
 ### Audio Fix:
