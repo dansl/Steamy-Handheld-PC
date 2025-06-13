@@ -115,11 +115,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 	```
 	sudo nano /etc/default/grub
 	```
-- Find the line below and add acpi=strict to the end of the list of parameters inside the quotes.
-	 ```
-	 GRUB_CMDLINE_LINUX_DEFAULT="..."
-	 ```
-	EXAMPLE: GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi=strict"
+- Find ```GRUB_CMDLINE_LINUX_DEFAULT``` and add ```acpi=strict``` to the end of the list of parameters inside the quotes.
 - Save and exit the editor (Ctrl + x, press y, press enter).
 - Regenerate the GRUB config:
 	 ```
