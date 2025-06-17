@@ -89,6 +89,8 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
  	- PRO TIP: Turn on Steam's FPS overlay and start playing your game. Then trying dropping the current TDP to 10W and test the game... If your FPS drops, then try setting to 15W and test. If FPS drops go up some more, but if it's stable then either stop there or try to bring it down a bit. After a few adjustments you will know what TDP is good for stable FPS and much better battery life!
 - Set your controller to "Steam Deck" mode using DeckyPlumber.
 - Install "CSS Loader" Decky Loader Plugin and "[Handheld Controller Glyphs](https://github.com/victor-borges/handheld-controller-glyphs)" to change all the glyphs in the UI to match your device.
+- Install [Conky](https://github.com/brndnmtthws/conky) for monitoring system resources on your desktop.
+ - For instance, on the Ayaneo Flip DS, you can play games on the top screen and monitor your system resources on the bottom screen. Use my [FlipDS Conky config](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky-config-FlipDS.txt) to get started. Download the file and drop it in your "~/" home folder and rename it ".conkyrc", then open Conky. [Screenshot](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky.jpg)
 
 ## Fixes:
 ### Audio Fix:
