@@ -50,7 +50,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
   - Manually install
     - [ChimeraOS Kernel & Header](https://github.com/ChimeraOS/linux-chimeraos/releases)
     	- Some devices work fine without this, only install if you are having issues. Download both the Kernel and Header files, then install them using ```sudo pacman -S [path_to_file]``` or depending on the Arch distro, just opening the file should install it.
-    - [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) - Accessed via Steam Big Picture.
+    - [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) - Accessed via Steam Big Picture right side menu.
       ```
       curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh
       ```
