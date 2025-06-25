@@ -18,7 +18,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 | ----- | ----- | ----- |
 | Ayaneo Air 1S | ✅ | Requires ChimeraOS Kernel, [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). |
 | Ayaneo Flip DS | ✅ | Requires ChimeraOS Kernel, [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
-| Ayaneo Slide/Antec Core HS | ✅ | Requires [Kernel Param Fix](#ayaneo-slide-kernel-param-fix) or else it will randomly crash. Sleep needs to be set to "Modern Standby + Si02" then can only be triggered from the interface and not via the power button, see [Sleep Fix](#sleep-fix). |
+| Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#ayaneo-slide-kernel-param-fix) or else it will randomly crash. |
 
 ## Things you need
 - Handheld PC x86/64
@@ -141,7 +141,7 @@ Newer AMD APU's do not support "S3 Sleep" and should instead use "Modern Standby
 	- Select "AMD PBS" then "Power Saving Configurations".
 	- Under "S3/Modern Standby Support" change the entry to "Modern Standby".
 	- Under "Modern Standby Type" select "Modern Standby + S0i2 + S0i3".
- 		- For the AYANEO Slide/Antec Core HS use "Modern Standby + S0i2".
+ 		- For the AYANEO Slide/Antec Core HS use "Modern Standby + S0i2" and initiate sleep via UI and not with power button.
 	- Save changes and exit, allowing the device to reboot.
 
 ### Updating Ayaneo BIOS/EC without Windows
