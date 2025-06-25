@@ -85,7 +85,7 @@ sudo systemctl enable inputplumber && sudo systemctl start inputplumber
 ### ChimeraOS Kernel
 Some devices work fine without this, only install if you are having issues.
 - Download both [ChimeraOS Kernel & Header](https://github.com/ChimeraOS/linux-chimeraos/releases).
-- Install them using ```sudo pacman -S [path_to_file]``` or depending on the Arch distro, just opening the file should install it.
+- Install them using `sudo pacman -S [path_to_file]` or depending on the Arch distro, just opening the file should install it.
 - Reboot device, hold down "Shift" while booting. This should open the Kernel menu, select the kernel that mentions "ChimeraOS" on it, if it's not already selected.
 	- You will also need to set this kernel as default, if it's not defaulted already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup.
 - Periodically you will need to repeath these steps to manually update the kernel+header.
@@ -98,8 +98,12 @@ yay -S ayaneo-platform-dkms-git
 ```
 
 ### Audio Fix:
-- Download and install the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Handheld-PC/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
-	- This is available via AUR, but it's URL is broken... [(See Comments Here)](https://aur.archlinux.org/packages/aw87559-firmware)
+- Download the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Handheld-PC/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
+	- Install it using `sudo pacman -S [path_to_file]` or depending on the Arch distro, just opening the file should install it.
+	- NOTE: This is also available via AUR, but it's URL is broken at the moment... [(See Comments Here)](https://aur.archlinux.org/packages/aw87559-firmware)
+		```
+		yay -S aw87559-firmware
+		```
 
 ### Popping Speakers Fix:
 - Create/edit file at "/etc/modprobe.d/audio.conf"
@@ -124,7 +128,7 @@ There is a bug with the Slide/Core HS that makes the device crash randomly on Li
 	```
 	sudo nano /etc/default/grub
 	```
-- Find ```GRUB_CMDLINE_LINUX_DEFAULT``` and add ```acpi=strict``` to the end of the list of parameters inside the quotes.
+- Find `GRUB_CMDLINE_LINUX_DEFAULT` and add `acpi=strict` to the end of the list of parameters inside the quotes.
 - Save and exit the editor (Ctrl + x, press y, press enter).
 - Regenerate the GRUB config:
 	 ```
@@ -183,7 +187,8 @@ sudo pacman -S gamescope
 sudo chmod +x ~/.local/share/applications/GameMode.desktop
 ```
 - Go to your OS's application list and open the application named "Game Mode".
-NOTE: If you have issues, try installing `gamescope-plus` via pacman
+
+NOTE: If you have issues, you can try installing `gamescope-plus` via pacman.
 
 ### Using Gamescope Session
 If you want to bypass Desktop mode completely. You can try out a "Gamescope Session", which skips desktop mode completely and boots directly into Steam Big Picture.
