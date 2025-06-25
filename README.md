@@ -146,7 +146,7 @@ Newer AMD APU's do not support "S3 Sleep" and should instead use "Modern Standby
 
 ### Updating Ayaneo BIOS/EC without Windows
 - Download your devices newest firmware files from [Ayaneo Support](https://ayaneo.com/support/download).
-- Download [shellx64](https://github.com/pbatard/UEFI-Shell/releases/download/24H1/shellx64.efi).
+- Download [shellx64.efi](https://github.com/pbatard/UEFI-Shell/releases).
 - Format a USB drive as FAT32 and create the folders `/EFI/Boot/` on the root of the USB drive.
 - Place `shellx64.efi` into the Boot folder and rename it to `BootX64.efi`
 - Extract the Ayaneo firmware files to the USB drive. Make sure the .bin file that contains the update is on the root of the USB drive, as well as the file called `AfuEfix64.efi`.
