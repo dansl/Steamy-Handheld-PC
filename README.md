@@ -23,12 +23,14 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 | Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#kernel-param-fix). |
 
 ## Things you need
+
 - Handheld PC x86/64
 - Keyboard + Mouse (not needed on some devices, but makes things easier at first)
 - USB Stick loaded with bootable [Arch](https://archlinux.org) on it.
 	- While you could run stock Arch, I prefer an Arch distro. My personal choice is [Manjaro](https://manjaro.org) with GNOME, but some other great options are [EndeavourOS](https://endeavouros.com) or [CachyOS](https://cachyos.org) or many others. Follow their instructions to setup a bootable USB.
 
 ## How to Setup
+
 - First, use the USB stick to install your chosen Arch distro on your device.
   - You can usually access the boot menu by mashing F7 while the device boots.
   - TIP: Remove any SD cards before installing, just so you don't accidentally install the OS to the SD card.
@@ -77,7 +79,9 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 	- Go to Steam Settings > Compatability, and toggle on "Enable Steam Play for all other titles".
 	- If you are unable to control the mouse pointer with the controller. Open Settings > Controller > Scroll down to 'Desktop Layout'. Enable 'Steam Input' and setup the controls.
 	- Optional: Open Settings > Interface > enable "Run Steam when my computer starts" and also enable "Start Steam in Big Picture Mode" if you want it to feel more like a SteamDeck when it boots up.
+
 ## Recommendations:
+
 - Enable Accessibility feature "on-screen keyboard" in settings (if available).
 - Enable Auto-Login.
 - Disable Lock Screen and Sleep Lock.
@@ -90,6 +94,7 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
   - For instance, on the Ayaneo Flip DS, you can play games on the top screen and monitor your system resources on the bottom screen. Use my [FlipDS Conky config](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky-config-FlipDS.txt) to get started. Download the file and drop it in your "~/" home folder and rename it ".conkyrc", then open Conky. You will also need to install "radeontop" via pacman for GPU stats. [Screenshot](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky.jpg)
 
 ## Fixes:
+
 ### ChimeraOS Kernel
 Some devices work fine without this, only install if you are having issues.
 - Download both [ChimeraOS Kernel & Header](https://github.com/ChimeraOS/linux-chimeraos/releases).
