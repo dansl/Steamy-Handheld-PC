@@ -58,12 +58,10 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
       ```
       curl -L https://raw.githubusercontent.com/honjow/huesync/main/install.sh | sh
       ```
-
-- Open Terminal and enter these commands:
-  - Enable InputPlumber to run on boot
-	```
-	sudo systemctl enable inputplumber && sudo systemctl start inputplumber
- 	```
+- Enable InputPlumber to run on boot
+```
+sudo systemctl enable inputplumber && sudo systemctl start inputplumber
+```
 - Reboot Device.
 - Open Steam app and login with Steam account.
 	- If you are unable to control the mouse pointer with the controller. Open Settings > Controller > Scroll down to 'Desktop Layout'. Enable 'Steam Input' and setup the controls.
