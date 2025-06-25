@@ -165,4 +165,27 @@ AFUEFIx64 <BIOS> /p /b /n /k /L /REBOOT
 - Select the USB drive from the boot menu using the "Ayaneo button" to select and "volume button" to confirm.
 - ***Do not press anything or remove the drive until the BIOS update completes and the device completely reboots! Interrupting the update in any way can brick your device!***
 
+### Use Gamescope in Desktop Mode
+Using Gamescope can provide better performance and better compatability. So if you want to try out Gamescope you can follow these steps.
+- Install Gamescope via Pacman
+```
+sudo pacman -S gamescope
+```
+- You can now run it via command.
+```
+gamescope -fe -- steam -tenfoot
+```
+- If you want an app to run it, download [GameMode.desktop](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/GameMode.desktop) and place it in `~/.local/share/applications`
+- Go to your OS's application list and open the application named "Game Mode".
+- Once in GameScope, the only way to exit is to either reboot or find a way to alt-tab and force close the app.
+
+Alternativly, you can also try out a "Gamescope Session".
+- Install Gamescope Session via Pacman
+```
+sudo pacman -S gamescope-session-git
+```
+- Logout, then switch your enviroment to "Steam Big Picture" and login.
+	- If you are using GNOME, click on your username, then look in the lower right corner for a Cog icon to select enviroment.
+- To return to Desktop, logout and change back the enviroment, then login.
+
 For tips on how to use Linux, check out my [Linux Tips](https://github.com/dansl/LinuxOS-Stuff)!
