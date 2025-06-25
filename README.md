@@ -18,7 +18,7 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 | ----- | ----- | ----- |
 | Ayaneo Air 1S | ✅ | Requires ChimeraOS Kernel, [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). |
 | Ayaneo Flip DS | ✅ | Requires ChimeraOS Kernel, [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
-| Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#ayaneo-slide-kernel-param-fix) or else it will randomly crash. |
+| Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#kernel-param-fix). |
 
 ## Things you need
 - Handheld PC x86/64
@@ -113,7 +113,8 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 	```
 	SteamDeck=1 %command%
 	```
-### Ayaneo Slide Kernel Param Fix:
+### Kernel Param Fix:
+There is a bug with the Slide/Core HS that makes the device crash randomly on Linux. So far, this has been the only known fix for it.
 - Edit your GRUB config
 	```
 	sudo nano /etc/default/grub
