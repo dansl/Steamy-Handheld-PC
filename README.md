@@ -1,9 +1,11 @@
 # Steamy Handheld PC
 Ditch Windows and turn your handheld PC into a SteamOS-like device with Arch Linux.
 
-**!! WORK IN PROGRESS !!**
+**!! DISCLAIMER !!**
 
-For now, this is just a rough idea of how to run Arch Linux properly on your Handheld. I am not using Gamescope session, as it can tend to be a bit more complicated to setup. This will only set up running Steam in "Big Picture Mode" for a "SteamOS-like" desktop experience. Alternativly, you could also just install [ChimeraOS](https://chimeraos.org), but if that distro ever stops being supported or you would rather just use your own Arch setup, then this is a good starting point.
+**Follow this guide "AT YOUR OWN RISK", there is always a chance to accidently brick your device. If you are not comfortable with that idea, then do NOT continue.**
+
+Note: For now, this is just a rough idea of how to run Arch Linux properly on your Handheld. This will only set up running Steam in "Big Picture Mode" for a "SteamOS-like" desktop experience. Alternativly, you could also just install [ChimeraOS](https://chimeraos.org), but if that distro ever stops being supported or you would rather just use your own Arch setup, then this is a good starting point.
 
 ## Features
 
