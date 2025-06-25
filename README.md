@@ -16,9 +16,9 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 
 | Device | Work? | Notes |
 | ----- | ----- | ----- |
-| Ayaneo Air 1S | ✅ | Requires ChimeraOS Kernel and [Audio Fix](#audio-fix). |
-| Ayaneo Flip DS | ✅ | Requires ChimeraOS Kernel and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
-| Ayaneo Slide/Antec Core HS | ✅ | Requires [Kernel Param Fix](#ayaneo-slide-kernel-param-fix) or else it will randomly crash. |
+| Ayaneo Air 1S | ✅ | Requires ChimeraOS Kernel, [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). |
+| Ayaneo Flip DS | ✅ | Requires ChimeraOS Kernel, [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
+| Ayaneo Slide/Antec Core HS | ✅ | Requires [Kernel Param Fix](#ayaneo-slide-kernel-param-fix) or else it will randomly crash. Sleep needs to be set to "Modern Standby + Si02" then can only be triggered from the interface and not via the power button, see [Sleep Fix](#sleep-fix). |
 
 ## Things you need
 - Handheld PC x86/64
@@ -125,5 +125,40 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 	 sudo update-grub
 	 ```
 - Reboot
+
+### Sleep Fix
+Newer AMD APU's do not support "S3 Sleep" and should instead use "Modern Standby". Some devices already have "Modern Standby" enabled, some can enable this feature via BIOS firware settings, and others might need to use the 3rd party "Smokeless UMAF".
+
+- Enter your BIOS firmware settings (Press ESC during bootup) and see if you have Advanced options with "AMD PBS" listed. If so, skip to the next section labeled "Enable Modern Standby".
+	- Format a USB stick with FAT32.
+	- Download [Smokeless UMAF](https://github.com/DavidS95/Smokeless_UMAF/raw/main/UMAF_BETA.zip).
+	- Extract `UMAF_Beta.zip` and copy the contents into the root of the usb stick.
+	- Boot your device and select the USB stick from the boot menu. (Press F7 during bootup for menu)
+	- Navigate to the "Front Page" tab and select "Device Manager".
+ 	- Continue Below.
+
+- Enable Modern Standby
+	- Select "AMD PBS" then "Power Saving Configurations".
+	- Under "S3/Modern Standby Support" change the entry to "Modern Standby".
+	- Under "Modern Standby Type" select "Modern Standby + S0i2 + S0i3".
+ 		- For the AYANEO Slide/Antec Core HS use "Modern Standby + S0i2".
+	- Save changes and exit, allowing the device to reboot.
+
+### Updating Ayaneo BIOS/EC without Windows
+- Download your devices newest firmware files from [Ayaneo Support](https://ayaneo.com/support/download).
+- Download [shellx64](https://github.com/pbatard/UEFI-Shell/releases/download/24H1/shellx64.efi).
+- Format a USB drive as FAT32 and create the folders `/EFI/Boot/` on the root of the USB drive.
+- Place `shellx64.efi` into the Boot folder and rename it to `BootX64.efi`
+- Extract the Ayaneo firmware files to the USB drive. Make sure the .bin file that contains the update is on the root of the USB drive, as well as the file called `AfuEfix64.efi`.
+- Create a new plain text file on the root of the USB drive and name it `startup.nsh`.
+- Place the following text into startup.nsh, replacing `<BIOS>` with the full name of the .bin file containing the BIOS update:
+```
+fs1:
+AFUEFIx64 <BIOS> /p /b /n /k /L /REBOOT
+```
+- Ensure you have more than 50% battery and your device is plugged in.
+- Plug the USB drive into your device, and hold "LC and Volume+" until the Ayaneo logo appears, or push F7 during bootup.
+- Select the USB drive from the boot menu using the "Ayaneo button" to select and "volume button" to confirm.
+- ***Do not press anything or remove the drive until the BIOS update completes and the device completely reboots! Interrupting the update in any way can brick your device!***
 
 For tips on how to use Linux, check out my [Linux Tips](https://github.com/dansl/LinuxOS-Stuff)!
