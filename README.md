@@ -16,8 +16,8 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 
 | Device | Work? | Notes |
 | ----- | ----- | ----- |
-| Ayaneo Air 1S | ✅ | Requires ChimeraOS Kernel, [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). |
-| Ayaneo Flip DS | ✅ | Requires ChimeraOS Kernel, [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
+| Ayaneo Air 1S | ✅ | Requires [ChimeraOS Kernel](#chimeraos-kernel), [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). |
+| Ayaneo Flip DS | ✅ | Requires [ChimeraOS Kernel](#chimeraos-kernel), [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
 | Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#kernel-param-fix). |
 
 ## Things you need
@@ -48,8 +48,6 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 	```
 
   - Manually install
-    - [ChimeraOS Kernel & Header](https://github.com/ChimeraOS/linux-chimeraos/releases)
-    	- Some devices work fine without this, only install if you are having issues. Download both the Kernel and Header files, then install them using ```sudo pacman -S [path_to_file]``` or depending on the Arch distro, just opening the file should install it.
     - [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) - Accessed via Steam Big Picture right side menu.
       ```
       curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh
@@ -73,9 +71,6 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
 	sudo systemctl enable inputplumber && sudo systemctl start inputplumber
  	```
 - Reboot Device.
-	- If you installed the ChimeraOS Kernel, hold down "Shift" while booting. This should open the Kernel menu, select the kernel that mentions "ChimeraOS" on it, if it's not already selected.
-	- You will also need to set this kernel as default, if it's not defaulted already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup.
- 	- Periodically you will need to manually update the kernel.
 - Open Steam app and log in.
 	- Go to Steam Settings > Compatability, and toggle on "Enable Steam Play for all other titles".
 	- If you are unable to control the mouse pointer with the controller. Open Settings > Controller > Scroll down to 'Desktop Layout'. Enable 'Steam Input' and setup the controls.
@@ -93,6 +88,14 @@ For now, this is just a rough idea of how to run Arch Linux properly on your Han
   - For instance, on the Ayaneo Flip DS, you can play games on the top screen and monitor your system resources on the bottom screen. Use my [FlipDS Conky config](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky-config-FlipDS.txt) to get started. Download the file and drop it in your "~/" home folder and rename it ".conkyrc", then open Conky. You will also need to install "radeontop" via pacman for GPU stats. [Screenshot](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky.jpg)
 
 ## Fixes:
+### ChimeraOS Kernel
+Some devices work fine without this, only install if you are having issues.
+- Download both [ChimeraOS Kernel & Header](https://github.com/ChimeraOS/linux-chimeraos/releases).
+- Install them using ```sudo pacman -S [path_to_file]``` or depending on the Arch distro, just opening the file should install it.
+- Reboot device, hold down "Shift" while booting. This should open the Kernel menu, select the kernel that mentions "ChimeraOS" on it, if it's not already selected.
+	- You will also need to set this kernel as default, if it's not defaulted already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup.
+- Periodically you will need to repeath these steps to manually update the kernel+header.
+
 ### Audio Fix:
 - Download and install the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Handheld-PC/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
 	- This is available via AUR, but it's URL is broken... [(See Comments Here)](https://aur.archlinux.org/packages/aw87559-firmware)
