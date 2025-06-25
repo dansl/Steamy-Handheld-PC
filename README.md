@@ -170,36 +170,34 @@ AFUEFIx64 <BIOS> /p /b /n /k /L /REBOOT
 - Ensure you have more than 50% battery and your device is plugged in.
 - Plug the USB drive into your device, and hold "LC and Volume+" until the Ayaneo logo appears, or push F7 during bootup.
 - Select the USB drive from the boot menu using the "Ayaneo button" to select and "volume button" to confirm.
-- ***Do not press anything or remove the drive until the BIOS update completes and the device completely reboots! Interrupting the update in any way can brick your device!***
+- **Do not press anything or remove the drive until the BIOS update completes and the device completely reboots! Interrupting the update in any way can brick your device!**
 
 ### Using Gamescope in Desktop Mode
 Using Gamescope can provide better performance and better compatability. So if you want to try out Gamescope you can follow these steps.
+
+**Note: Once in Gamescope, the only way to exit is to either reboot your device or find a way to alt-tab and force close the app.**
+
 - Install Gamescope via Pacman
 ```
 sudo pacman -S gamescope
 ```
-- You can now run it via command.
-```
-gamescope -f -m 1 -e -- steam -gamepadui
-```
-
-If you prefer to just open an app to run it.
 - Download [GameMode.desktop](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/GameMode.desktop)
 - Place `GameMode.desktop` in `~/.local/share/applications`
-- Make the file executable.
+- Make the file executable with this command.
 ```
 sudo chmod +x ~/.local/share/applications/GameMode.desktop
 ```
 - Go to your OS's application list and open the application named "Game Mode".
-- Once in GameScope, the only way to exit is to either reboot or find a way to alt-tab and force close the app.
+NOTE: If you have issues, try installing `gamescope-plus` via pacman
 
-Alternativly, you can also try out a "Gamescope Session".
+### Using Gamescope Session
+If you want to bypass Desktop mode completely. You can try out a "Gamescope Session", which skips desktop mode completely and boots directly into Steam Big Picture.
 - Install Gamescope Session via Pacman
 ```
 sudo pacman -S gamescope-session-git
 ```
 - Logout, then switch your enviroment to "Steam Big Picture" and login.
 	- If you are using GNOME, click on your username, then look in the lower right corner for a Cog icon to select enviroment.
-- To return to Desktop, logout and change back the enviroment, then login.
+- To return to Desktop, logout and change the enviroment back to GNOME or KDE, etc, then login.
 
 For tips on how to use Linux, check out my [Linux Tips](https://github.com/dansl/LinuxOS-Stuff)!
