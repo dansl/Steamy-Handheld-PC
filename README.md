@@ -66,8 +66,9 @@ sudo systemctl enable inputplumber && sudo systemctl start inputplumber
 - Open Steam app and login with Steam account.
 	- If you are unable to control the mouse pointer with the controller. Open Settings > Controller > Scroll down to 'Desktop Layout'. Enable 'Steam Input' and setup the controls.
 	- Optional: Open Settings > Interface > enable "Run Steam when my computer starts" and also enable "Start Steam in Big Picture Mode" if you want it to feel more like a SteamDeck when it boots up.
+- See [Various Known Fixes](#various-known-fixes) for help if you have issues.
 
-## Recommendations:
+## Recommendations
 
 - Enable Accessibility feature "on-screen keyboard" in settings (if available).
 - Enable Auto-Login.
@@ -80,7 +81,7 @@ sudo systemctl enable inputplumber && sudo systemctl start inputplumber
 - Install [Conky](https://github.com/brndnmtthws/conky) for monitoring system resources on your desktop.
   - For instance, on the Ayaneo Flip DS, you can play games on the top screen and monitor your system resources on the bottom screen. Use my [FlipDS Conky config](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky-config-FlipDS.txt) to get started. Download the file and drop it in your "~/" home folder and rename it ".conkyrc", then open Conky. You will also need to install "radeontop" via pacman for GPU stats. [Screenshot](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky.jpg)
 
-## Fixes:
+## Various Known Fixes
 
 ### ChimeraOS Kernel
 Some devices work fine without this, only install if you are having issues.
