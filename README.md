@@ -18,7 +18,7 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 
 | Device | Work? | Notes |
 | ----- | ----- | ----- |
-| Ayaneo Air 1S | ✅ | Requires [ChimeraOS Kernel](#chimeraos-kernel), [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). |
+| Ayaneo Air 1S | ✅ | Requires [ChimeraOS Kernel](#chimeraos-kernel), [Sleep Fix](#sleep-fix), [Audio Fix](#audio-fix) and [RGB Fix](#ayaneo-rgb-fix). |
 | Ayaneo Flip DS | ✅ | Requires [ChimeraOS Kernel](#chimeraos-kernel), [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
 | Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#kernel-param-fix). |
 
@@ -32,39 +32,29 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 ## How to Setup
 
 - First, use the USB stick to install your chosen Arch distro on your device.
-  - You can usually access the boot menu by mashing F7 while the device boots.
+  - You can usually access the boot menu by pressing F7 while the device boots.
   - TIP: Remove any SD cards before installing, just so you don't accidentally install the OS to the SD card.
 - Once your OS is installed and you are booted into the OS, install these packages.
-  - Using Pacman
-    - [inputplumber](https://github.com/ShadowBlip/InputPlumber)
-    - [steam](https://wiki.archlinux.org/title/Steam)
+  - Install Steam and InputPlumber
+    - [inputplumber](https://github.com/ShadowBlip/InputPlumber) - For mapping your devices controls
+    - [steam](https://wiki.archlinux.org/title/Steam) - Steam!
     ```
     sudo pacman -S inputplumber steam
     ```
-  - Using AUR
-    - [chimeraos-device-quirks](https://github.com/ChimeraOS/device-quirks)
-	```
-	yay -S chimeraos-device-quirks
-	```
-    - AYANEO DEVICES ONLY: [ayaneo-platform-dkms-git](https://github.com/ShadowBlip/ayaneo-platform)
-	```
-	yay -S ayaneo-platform-dkms-git
-	```
-
-  - Manually install
-    - [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) - Accessed via Steam Big Picture right side menu.
+  - Install Decky Loader and plugins
+    - [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) - Can be accessed via Steam Big Picture right side menu.
       ```
       curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh
       ```
-    - [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) - Decky Loader Plugin
+    - [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) - Decky Loader Plugin for tweaking your devices CPU and GPU power draw.
       ```
       curl -L https://github.com/aarron-lee/SimpleDeckyTDP/raw/main/install.sh | sh
       ```
-    - [DeckyPlumber](https://github.com/aarron-lee/DeckyPlumber) - Decky Loader Plugin
+    - [DeckyPlumber](https://github.com/aarron-lee/DeckyPlumber) - Decky Loader Plugin for changing controller layout.
       ```
       curl -L https://github.com/aarron-lee/DeckyPlumber/raw/main/install.sh | sh
       ```
-    - [HueSync](https://github.com/honjow/HueSync) - Decky Loader Plugin (NOTE: This is only needed if your device has RGB lighting on it, otherwise skip.)
+    - [HueSync](https://github.com/honjow/HueSync) - Decky Loader Plugin for tweaking RGB lighting, can be ignored if your device doesn't have RGB lighting.
       ```
       curl -L https://raw.githubusercontent.com/honjow/huesync/main/install.sh | sh
       ```
@@ -75,8 +65,7 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 	sudo systemctl enable inputplumber && sudo systemctl start inputplumber
  	```
 - Reboot Device.
-- Open Steam app and log in.
-	- Go to Steam Settings > Compatability, and toggle on "Enable Steam Play for all other titles".
+- Open Steam app and login with Steam account.
 	- If you are unable to control the mouse pointer with the controller. Open Settings > Controller > Scroll down to 'Desktop Layout'. Enable 'Steam Input' and setup the controls.
 	- Optional: Open Settings > Interface > enable "Run Steam when my computer starts" and also enable "Start Steam in Big Picture Mode" if you want it to feel more like a SteamDeck when it boots up.
 
@@ -85,10 +74,10 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 - Enable Accessibility feature "on-screen keyboard" in settings (if available).
 - Enable Auto-Login.
 - Disable Lock Screen and Sleep Lock.
-- Set your TDP to the recommended amount for your chipset/device using SimpleDeckyTDP.
-	 - Many devices can be set to a Max of 25W-30W, but don't go too high or else your device will crash and reboot.
- 	- PRO TIP: Turn on Steam's FPS overlay and start playing your game. Then trying dropping the current TDP to 10W and test the game... If your FPS drops, then try setting to 15W and test. If FPS drops go up some more, but if it's stable then either stop there or try to bring it down a bit. After a few adjustments you will know what TDP is good for stable FPS and much better battery life!
-- Set your controller to "Steam Deck" mode using DeckyPlumber.
+- Set your TDP to the recommended amount for your chipset/device using Decky Loader plugin SimpleDeckyTDP.
+	- Many devices can be set to a Max of 25W-30W, but don't go too high or else your device will crash and reboot.
+	- PRO TIP: Turn on Steam's FPS overlay and start playing your game. Then trying dropping the current TDP to 10W and test the game... If your FPS drops, then try setting to 15W and test. If FPS drops go up some more, but if it's stable then either stop there or try to bring it down a bit. After a few adjustments you will know what TDP is good for stable FPS and much better battery life!
+- Set your controller to "Steam Deck" mode using Decky Loader plugin DeckyPlumber.
 - Install "CSS Loader" Decky Loader Plugin and "[Handheld Controller Glyphs](https://github.com/victor-borges/handheld-controller-glyphs)" to change all the glyphs in the UI to match your device.
 - Install [Conky](https://github.com/brndnmtthws/conky) for monitoring system resources on your desktop.
   - For instance, on the Ayaneo Flip DS, you can play games on the top screen and monitor your system resources on the bottom screen. Use my [FlipDS Conky config](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky-config-FlipDS.txt) to get started. Download the file and drop it in your "~/" home folder and rename it ".conkyrc", then open Conky. You will also need to install "radeontop" via pacman for GPU stats. [Screenshot](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky.jpg)
@@ -102,6 +91,13 @@ Some devices work fine without this, only install if you are having issues.
 - Reboot device, hold down "Shift" while booting. This should open the Kernel menu, select the kernel that mentions "ChimeraOS" on it, if it's not already selected.
 	- You will also need to set this kernel as default, if it's not defaulted already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup.
 - Periodically you will need to repeath these steps to manually update the kernel+header.
+
+### Ayaneo RGB Fix
+Ayaneo devices will need this package to change RGB lighting.
+- [ayaneo-platform-dkms-git](https://github.com/ShadowBlip/ayaneo-platform)
+```
+yay -S ayaneo-platform-dkms-git
+```
 
 ### Audio Fix:
 - Download and install the Audio Driver file in this repo: [aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst](https://github.com/dansl/Steamy-Handheld-PC/raw/refs/heads/main/aw87559-firmware-8.0.1.10-1-x86_64.pkg.tar.zst)
@@ -123,6 +119,7 @@ Some devices work fine without this, only install if you are having issues.
 	```
 	SteamDeck=1 %command%
 	```
+
 ### Kernel Param Fix:
 There is a bug with the Slide/Core HS that makes the device crash randomly on Linux. So far, this has been the only known fix for it.
 - Edit your GRUB config
