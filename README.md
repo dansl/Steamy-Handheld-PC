@@ -187,6 +187,7 @@ sudo pacman -S gamescope
 ```
 sudo chmod +x ~/.local/share/applications/GameMode.desktop
 ```
+- Exit Steam if it's running.
 - Go to your OS's application list and open the application named "Game Mode".
 
 NOTE: If you have issues, you can try installing `gamescope-plus` via pacman.
