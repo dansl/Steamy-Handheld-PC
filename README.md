@@ -26,15 +26,19 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 
 - Handheld PC x86/64
 - Keyboard + Mouse (not needed on some devices, but makes things easier at first)
-- USB Stick loaded with bootable [Arch](https://archlinux.org) on it.
-	- While you could run stock Arch, I prefer an Arch distro. My personal choice is [Manjaro](https://manjaro.org) with GNOME, but some other great options are [EndeavourOS](https://endeavouros.com) or [CachyOS](https://cachyos.org) or many others. Follow their instructions to setup a bootable USB.
+- USB Flash Drive loaded with bootable [Arch](https://archlinux.org) on it.
+	- While you could run stock Arch, I prefer an Arch distro. My personal choice is [Manjaro](https://manjaro.org) with GNOME or KDE, but some other great options are [EndeavourOS](https://endeavouros.com) or [CachyOS](https://cachyos.org) or many others.
 
 ## How to Setup
 
-- First, use the USB stick to install your chosen Arch distro on your device.
-  - You can usually access the boot menu by pressing F7 while the device boots.
-  - TIP: Remove any SD cards before installing, just so you don't accidentally install the OS to the SD card.
-- Once your OS is installed and you are booted into the OS, install these packages.
+- First, setup the USB Drive to install your chosen Arch distro on your device.
+  - Download an ISO image for the distro of your choice. You may need to unzip it so you are left with the .ISO file
+  - Download [BalenaEtcher](https://etcher.balena.io) and use the app to wipe your USB drive and flash the ISO image to it.
+  - Once flashing is complete, you can put the USB drive into your Handheld PC, and Reboot the device.
+- You will need to boot into the USB drive. This can be done a few ways, and every device is different. You can sometimes access the boot menu by pressing F7 while the device boots, or press ESC. If neither of those work, try F8, F9, F10, F11 or F12. You should see somewhere in the menu to select USB as the boot device.
+  - Once booted into the OS, you can follow the prompts to install the OS.
+    - TIP: Remove any SD cards before installing, just so you don't accidentally install the OS to the SD card.
+- Once your OS is installed and you have rebooted into the OS, install these packages.
   - Install Steam and InputPlumber
     - [inputplumber](https://github.com/ShadowBlip/InputPlumber) - For mapping your devices controls
     - [steam](https://wiki.archlinux.org/title/Steam) - Steam!
