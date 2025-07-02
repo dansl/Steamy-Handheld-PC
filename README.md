@@ -93,7 +93,7 @@ Some devices work fine without this, only install if you are having issues.
 - Install them using `sudo pacman -S [path_to_file]` or depending on the Arch distro, just opening the file should install it.
 - Reboot device, hold down "Shift" while booting. This should open the Kernel menu, select the kernel that mentions "ChimeraOS" on it, if it's not already selected.
 	- You will also need to set this kernel as default, if it's not defaulted already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup.
-- Periodically you will need to repeath these steps to manually update the kernel+header.
+- Periodically you will need to repeat these steps to manually update the kernel+header.
 
 ### Ayaneo RGB Fix
 Ayaneo devices will need this package to change RGB lighting.
