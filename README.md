@@ -83,7 +83,12 @@ sudo systemctl enable inputplumber && sudo systemctl start inputplumber
 - Set your controller to "Steam Deck" mode using Decky Loader plugin DeckyPlumber.
 - Install "CSS Loader" Decky Loader Plugin and "[Handheld Controller Glyphs](https://github.com/victor-borges/handheld-controller-glyphs)" to change all the glyphs in the UI to match your device.
 - Install [Conky](https://github.com/brndnmtthws/conky) for monitoring system resources on your desktop.
-  - For instance, on the Ayaneo Flip DS, you can play games on the top screen and monitor your system resources on the bottom screen. Use my [FlipDS Conky config](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky-config-FlipDS.txt) to get started. Download the file and drop it in your "~/" home folder and rename it ".conkyrc", then open Conky. You will also need to install "radeontop" via pacman for GPU stats. [Screenshot](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky.jpg)
+  - For instance, on the Ayaneo Flip DS, you can play games on the top screen and monitor your system resources on the bottom screen. Use my [FlipDS Conky config](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky-config-FlipDS.txt) to get started. Download the file and drop it in your "~/" home folder and rename it ".conkyrc", then open Conky. You will also need to install "radeontop" via pacman for GPU stats. [Conky Screenshot](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/Conky.jpg)
+  - To auto-start Conky, download the [Conky Start Script](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/conky.sh) and the [Conky Desktop File](https://raw.githubusercontent.com/dansl/Steamy-Handheld-PC/refs/heads/main/conky.desktop).
+    - Put the .sh file in your home folder, and run this command ```chmod +x ~/conky.sh```
+  	- Put the .desktop file in the folder "~/.config/autostart". Then open the file with a text editor and change the "Exec=" path to match your home folder path. (ex: /home/username/conky.sh)
+    - Now Conky should start on boot.
+	
 
 ## Various Known Fixes
 
