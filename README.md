@@ -18,8 +18,8 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 
 | Device | Work? | Notes |
 | ----- | ----- | ----- |
-| Ayaneo Air 1S | ✅ | Requires [ChimeraOS Kernel](#chimeraos-kernel), [Sleep Fix](#sleep-fix), [Audio Fix](#audio-fix) and [RGB Fix](#ayaneo-rgb-fix). |
-| Ayaneo Flip DS | ✅ | Requires [ChimeraOS Kernel](#chimeraos-kernel), [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
+| Ayaneo Air 1S | ✅ | Requires [Alternative Kernel](#alternative-kernel), [Sleep Fix](#sleep-fix), [Audio Fix](#audio-fix) and [RGB Fix](#ayaneo-rgb-fix). |
+| Ayaneo Flip DS | ✅ | Requires [Alternative Kernel](#alternative-kernel), [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
 | Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#kernel-param-fix). |
 
 ## Things you need
@@ -92,11 +92,13 @@ sudo systemctl enable inputplumber && sudo systemctl start inputplumber
 
 ## Various Known Fixes
 
-### ChimeraOS Kernel
+### Alternative Kernel
 Some devices work fine without this, only install if you are having issues.
-- Download both [ChimeraOS Kernel & Header](https://github.com/ChimeraOS/linux-chimeraos/releases).
+- Download the Kernel and Header File of either ChimeraOS OR Bazzite Kernel.
+	- [ChimeraOS Kernel & Header](https://github.com/ChimeraOS/linux-chimeraos/releases).
+	- [Bazzite Kernel & Header](https://github.com/bazzite-org/kernel-bazzite/releases)
 - Install them using `sudo pacman -S [path_to_file]` or depending on the Arch distro, just opening the file should install it.
-- Reboot device, hold down "Shift" while booting. This should open the Kernel menu, select the kernel that mentions "ChimeraOS" on it, if it's not already selected.
+- Reboot device, hold down "Shift" while booting. This should open the Kernel menu, select the kernel that mentions "ChimeraOS" or "Bazzite" on it, if it's not already selected.
 	- You will also need to set this kernel as default, if it's not defaulted already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup.
 - Periodically you will need to repeat these steps to manually update the kernel+header.
 
