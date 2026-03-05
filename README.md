@@ -5,7 +5,7 @@ Ditch Windows and turn your handheld PC into a SteamOS-like device with Arch Lin
 
 **Follow this guide "AT YOUR OWN RISK", there is always a chance to accidently brick your device. If you are not comfortable with that idea, then do NOT continue.**
 
-Note: For now, this is just a rough idea of how to run Arch Linux properly on your Handheld. This will only set up running Steam in "Big Picture Mode" for a "SteamOS-like" desktop experience. Alternativly, you could also just install [ChimeraOS](https://chimeraos.org), but if that distro ever stops being supported or you would rather just use your own Arch setup, then this is a good starting point.
+Note: For now, this is just a rough idea of how to run Arch Linux properly on your Handheld. This will only set up running Steam in "Big Picture Mode" for a "SteamOS-like" desktop experience. Alternativly, you could also just install [Bazzite](https://bazzite.gg), but if that distro ever stops being supported or you would rather just use your own Arch setup, then this is a good starting point.
 
 ## Features
 
@@ -94,11 +94,9 @@ sudo systemctl enable inputplumber && sudo systemctl start inputplumber
 
 ### Alternative Kernel
 Some devices work fine without this, only install if you are having issues.
-- Download the Kernel and Header File of either ChimeraOS OR Bazzite Kernel.
-	- [ChimeraOS Kernel & Header](https://github.com/ChimeraOS/linux-chimeraos/releases).
-	- [Bazzite Kernel & Header](https://github.com/bazzite-org/kernel-bazzite/releases)
-- Install them using `sudo pacman -S [path_to_file]` or depending on the Arch distro, just opening the file should install it.
-- Reboot device, hold down "Shift" while booting. This should open the Kernel menu, select the kernel that mentions "ChimeraOS" or "Bazzite" on it, if it's not already selected.
+- Download the Bazzite Kernel via AUR.
+	- ``` yay -S linux-bazzite-bin ```
+- Reboot device, hold down "Shift" while booting. This should open the Kernel menu, select the kernel that mentions "Bazzite" on it, if it's not already selected.
 	- You will also need to set this kernel as default, if it's not defaulted already. This process varies depending on your setup. Search the web for "How to change default kernel" for your setup.
 - Periodically you will need to repeat these steps to manually update the kernel+header.
 
