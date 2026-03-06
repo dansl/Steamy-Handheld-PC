@@ -75,6 +75,7 @@ sudo systemctl enable inputplumber && sudo systemctl start inputplumber
 ## Recommendations
 
 - Enable Accessibility feature "on-screen keyboard" in settings (if available).
+  - For KDE: You may need to install "plasma-keyboard" and enable it in Keyboard settings, if it's not already installed.
 - Enable Auto-Login.
 - Disable Lock Screen and Sleep Lock.
 - Set your TDP to the recommended amount for your chipset/device using Decky Loader plugin SimpleDeckyTDP.
