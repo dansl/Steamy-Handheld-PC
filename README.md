@@ -19,7 +19,7 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 | Device | Work? | Notes |
 | ----- | ----- | ----- |
 | Ayaneo Air 1S | ✅ | Requires [Alternative Kernel](#alternative-kernel), [Sleep Fix](#sleep-fix), [Audio Fix](#audio-fix) and [RGB Fix](#ayaneo-rgb-fix). |
-| Ayaneo Flip DS | ✅ | Requires [Alternative Kernel](#alternative-kernel), [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
+| Ayaneo Flip DS | ✅ | Requires [Alternative Kernel](#alternative-kernel), [Sleep Fix](#sleep-fix), [Audio Fix](#audio-fix) and [Bottom Screen Fix](#bottom-screen-fix) |
 | Ayaneo Flip 1S DS | ⚠️ | Sleep is broken, [Bottom Screen Fix](#bottom-screen-fix) |
 | Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#kernel-param-fix). |
 
@@ -28,7 +28,8 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 - Handheld PC x86/64
 - Keyboard + Mouse (not needed on some devices, but makes things easier at first)
 - USB Flash Drive loaded with bootable [Arch](https://archlinux.org) on it.
-	- While you could run stock Arch, I prefer an Arch distro. My personal choice is [Manjaro](https://manjaro.org) with GNOME or KDE, but some other great options are [EndeavourOS](https://endeavouros.com) or [CachyOS](https://cachyos.org) or many others.
+	- While you could run stock Arch with KDE or Gamescope, I prefer an Arch distro. My personal choice is [Manjaro](https://manjaro.org) with KDE, but some other great options are [EndeavourOS](https://endeavouros.com) or [CachyOS](https://cachyos.org) or many others.
+ 	- KDE desktop environment is recommended!
 
 ## How to Setup
 
