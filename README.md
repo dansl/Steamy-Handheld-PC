@@ -20,6 +20,7 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 | ----- | ----- | ----- |
 | Ayaneo Air 1S | ✅ | Requires [Alternative Kernel](#alternative-kernel), [Sleep Fix](#sleep-fix), [Audio Fix](#audio-fix) and [RGB Fix](#ayaneo-rgb-fix). |
 | Ayaneo Flip DS | ✅ | Requires [Alternative Kernel](#alternative-kernel), [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
+| Ayaneo Flip 1S DS | ✅ | Sleep is broken, [Bottom Screen Fix](#bottom-screen-fix) |
 | Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#kernel-param-fix). |
 
 ## Things you need
@@ -126,6 +127,10 @@ yay -S ayaneo-platform-dkms-git
 	options snd_hda_intel power_save=0 power_save_controller=N
 	```
 - Press Ctrl + x, press y, press enter to save and finish.
+
+### Bottom Screen Fix
+- In KDE settings > Touchscreen, change Device to "Goodix", then change Target Display to "AYALCD_QHD".
+- In KDE settings > Display, rotate the AYALCD_QHD 90 degrees, and adjust both screens Scale to your preference.
 
 ### Game Not Loading Fix:
 - If a game in Steam is not loading properly. Try adding this line to the games "Launch Options".
