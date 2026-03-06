@@ -20,7 +20,7 @@ Note: For now, this is just a rough idea of how to run Arch Linux properly on yo
 | ----- | ----- | ----- |
 | Ayaneo Air 1S | ✅ | Requires [Alternative Kernel](#alternative-kernel), [Sleep Fix](#sleep-fix), [Audio Fix](#audio-fix) and [RGB Fix](#ayaneo-rgb-fix). |
 | Ayaneo Flip DS | ✅ | Requires [Alternative Kernel](#alternative-kernel), [Sleep Fix](#sleep-fix), and [Audio Fix](#audio-fix). The bottom screen works but has no touch input. |
-| Ayaneo Flip 1S DS | ✅ | Sleep is broken, [Bottom Screen Fix](#bottom-screen-fix) |
+| Ayaneo Flip 1S DS | ⚠️ | Sleep is broken, [Bottom Screen Fix](#bottom-screen-fix) |
 | Ayaneo Slide/Antec Core HS | ✅ | Requires [Sleep Fix](#sleep-fix), and [Kernel Param Fix](#kernel-param-fix). |
 
 ## Things you need
